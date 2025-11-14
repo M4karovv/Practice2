@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Каталог | Ирина Банкова</title>
+    <link rel="stylesheet" href="catalog.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header-full">
+        <div class="header-inner">
+            <nav class="nav">
+                <a href="catalog.html" class="nav-link">Каталог</a>
+                <a href="blog.html" class="nav-link">Блог</a>
+                <a href="contacts.html" class="nav-link">Контакты</a>
+                <a href="#" class="nav-link">Обо мне</a>
+            </nav>
+            <div class="logo">Ирина Банкова</div>
+            <div class="contacts">
+                <div class="phone-dropdown">
+                    <span class="phone-number">+7 923 614 57 70 <span class="arrow">▼</span></span>
+                    <div class="dropdown-content">
+                        <a href="https://wa.me/79236145770" target="_blank" class="dropdown-item whatsapp">
+                            <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg" alt="WhatsApp" class="icon"> +7 923 614 57 70
+                        </a>
+                        <a href="https://t.me/iren_pro_nedvizhimost" target="_blank" class="dropdown-item telegram">
+                            <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/telegram.svg" alt="Telegram" class="icon"> @iren_pro_nedvizhimost
+                        </a>
+                        <a href="https://instagram.com/irenpronedvizhimost" target="_blank" class="dropdown-item instagram">
+                            <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg" alt="Instagram" class="icon"> @irenpronedvizhimost
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main class="catalog-main">
+        <div class="breadcrumbs"><a href="home.html">Главная</a> / <a href="catalog.html">Каталог</a></div>
+        <h1 class="catalog-title">Каталог</h1>
+        <form class="catalog-filters" id="catalogFilters">
+            <select name="type" class="filter-select">
+                <option value="">Тип недвижимости</option>
+                <option value="Квартира">Квартира</option>
+                <option value="Коттедж">Коттедж</option>
+                <option value="Коммерческая">Коммерческая</option>
+                <option value="Парковка">Парковка, гараж</option>
+            </select>
+            <input type="number" name="priceMin" class="filter-input" placeholder="Сумма, руб. от">
+            <input type="number" name="priceMax" class="filter-input" placeholder="Сумма, руб. до">
+            <input type="number" name="areaMin" class="filter-input" placeholder="Площадь, от">
+            <input type="number" name="areaMax" class="filter-input" placeholder="Площадь, до">
+        </form>
+        <div class="catalog-grid" id="catalogGrid">
+            <!-- Карточки будут добавляться через JS -->
+        </div>
+    </main>
+    <footer class="site-footer">
+        <div class="footer-content">
+            <div class="footer-phone">+7 923 614 57 70</div>
+            <a href="#" class="footer-link">Политика конфиденциальности</a>
+            <div class="footer-copy">© 2024 Ирина Банкова</div>
+        </div>
+    </footer>
+    <script src="general.js"></script>
+    <script src="catalog.js"></script>
+</body>
+</html>

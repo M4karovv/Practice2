@@ -1,0 +1,227 @@
+body {
+    margin: 0;
+    font-family: 'Montserrat', Arial, sans-serif;
+    background: #fff;
+    color: #181818;
+}
+.header-full {
+    width: 100vw;
+    background: #fff;
+    border-bottom: 1px solid #bdbdbd;
+    box-sizing: border-box;
+    position: relative;
+    z-index: 20;
+}
+.header-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 0 10px 0;
+}
+.nav {
+    display: flex;
+    gap: 24px;
+}
+.nav-link {
+    text-decoration: none;
+    color: #181818;
+    font-size: 16px;
+    transition: color 0.2s;
+}
+.nav-link:hover {
+    color: #888;
+}
+.logo {
+    font-weight: 700;
+    font-size: 24px;
+    margin-left: 40px;
+}
+.contacts {
+    min-width: 220px;
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+}
+.phone-dropdown {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+}
+.phone-number {
+    font-weight: 600;
+    color: #888;
+    font-size: 16px;
+    user-select: none;
+}
+.arrow {
+    font-size: 12px;
+    margin-left: 4px;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 36px;
+    background: #fff;
+    border: 1px solid #bdbdbd;
+    border-radius: 10px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.12);
+    min-width: 260px;
+    z-index: 100;
+    padding: 10px 0;
+    animation: fadeIn 0.2s;
+}
+.dropdown-content.show {
+    display: block;
+}
+.dropdown-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 20px;
+    color: #181818;
+    text-decoration: none;
+    font-size: 16px;
+    transition: background 0.2s;
+}
+.dropdown-item:hover {
+    background: #f2f2f2;
+}
+.breadcrumbs {
+    max-width: 1200px;
+    margin: 24px auto 0 auto;
+    color: #888;
+    font-size: 14px;
+}
+.breadcrumbs a {
+    color: #181818;
+    text-decoration: none;
+}
+.breadcrumbs a:hover {
+    color: #888;
+    text-decoration: underline;
+}
+.contacts-main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-bottom: 40px;
+}
+.contacts-title {
+    font-size: 32px;
+    font-weight: 500;
+    margin: 16px 0 24px 0;
+}
+.contacts-block {
+    display: flex;
+    gap: 24px;
+    justify-content: center;
+    align-items: flex-start;
+    margin-bottom: 32px;
+}
+.contacts-left, .contacts-right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    max-width: 320px;
+}
+.contacts-separator {
+    width: 1px;
+    background: #d1d1d1;
+    align-self: stretch;
+}
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 17px;
+    color: #181818;
+    text-decoration: none;
+}
+.contact-item.schedule {
+    line-height: 1.4;
+}
+.contact-item .icon {
+    width: 22px;
+    height: 22px;
+}
+#map {
+    width: 100%;
+    height: 380px;
+    background-color: #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 32px;
+    border-radius: 12px;
+}
+@media (max-width: 900px) {
+    .header-inner, .contacts-main {
+        max-width: 100%;
+        padding: 0 8px;
+    }
+}
+@media (max-width: 700px) {
+    .contacts-title {
+        font-size: 20px;
+    }
+    .contacts-block {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .contacts-separator {
+        display: none;
+    }
+}
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+.site-footer {
+    background: #fff;
+    color: #181818;
+    box-shadow: 0 -2px 12px rgba(0,0,0,0.08);
+    font-size: 15px;
+    margin-top: 48px;
+}
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 18px;
+    padding: 12px 16px 10px 16px;
+}
+.footer-phone {
+    font-weight: 600;
+    font-size: 16px;
+}
+.footer-link {
+    color: #181818;
+    text-decoration: underline;
+    font-size: 14px;
+    transition: color 0.2s;
+}
+.footer-link:hover {
+    color: #888;
+}
+.footer-copy {
+    font-size: 14px;
+    color: #888;
+}
+@media (max-width: 700px) {
+    .footer-content {
+        flex-direction: column;
+        gap: 6px;
+        padding: 10px 4px 8px 4px;
+    }
+    .footer-link, .footer-copy, .footer-phone {
+        text-align: center;
+        width: 100%;
+    }
+}

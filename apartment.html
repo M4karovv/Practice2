@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Квартира | Ирина Банкова</title>
+    <link rel="stylesheet" href="apartment.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header-full">
+        <div class="header-inner">
+            <nav class="nav">
+                <a href="catalog.html" class="nav-link">Каталог</a>
+                <a href="blog.html" class="nav-link">Блог</a>
+                <a href="contacts.html" class="nav-link">Контакты</a>
+                <a href="#" class="nav-link">Обо мне</a>
+            </nav>
+            <div class="logo">Ирина Банкова</div>
+            <div class="contacts">
+                <div class="phone-dropdown">
+                    <span class="phone-number">+7 923 614 57 70 <span class="arrow">▼</span></span>
+                    <div class="dropdown-content">
+                        <a href="https://wa.me/79236145770" target="_blank" class="dropdown-item whatsapp">
+                            <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg" alt="WhatsApp" class="icon"> +7 923 614 57 70
+                        </a>
+                        <a href="https://t.me/iren_pro_nedvizhimost" target="_blank" class="dropdown-item telegram">
+                            <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/telegram.svg" alt="Telegram" class="icon"> @iren_pro_nedvizhimost
+                        </a>
+                        <a href="https://instagram.com/irenpronedvizhimost" target="_blank" class="dropdown-item instagram">
+                            <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg" alt="Instagram" class="icon"> @irenpronedvizhimost
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main class="apartment-main">
+        <div class="breadcrumbs"><a href="home.html">Главная</a> / <a href="catalog.html">Каталог</a></div>
+        <h1 class="apartment-title">Квартира</h1>
+        <div class="apartment-content">
+            <div class="apartment-gallery">
+                <div class="gallery-thumbs">
+                    <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=100&q=80" class="thumb" alt="thumb1">
+                    <img src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=100&q=80" class="thumb" alt="thumb2">
+                    <img src="https://images.unsplash.com/photo-1508921912186-1d1a45ebb3c1?auto=format&fit=crop&w=100&q=80" class="thumb" alt="thumb3">
+                    <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=100&q=80" class="thumb" alt="thumb4">
+                    <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=100&q=80" class="thumb" alt="thumb5">
+                </div>
+                <div class="gallery-main">
+                    <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&q=80" class="main-img" alt="main">
+                </div>
+            </div>
+            <div class="apartment-info">
+                <div class="apartment-header">
+                    <h2>3-комн. квартира, 87,5 м² в ЖК «Чикаго»</h2>
+                    <div class="apartment-address">Новосибирская область, Новосибирск, р-н Октябрьский, Московская ул., 77</div>
+                </div>
+                <div class="apartment-details">
+                    <div class="apartment-details-left">
+                        <div>Количество комнат: 3</div>
+                        <div>Общая площадь: 49м²</div>
+                        <div>Площадь кухни: 8м²</div>
+                        <div>Этаж: 22 из 25</div>
+                        <div>Балкон или лоджия: лоджия</div>
+                        <div>Тип комнат: изолированные</div>
+                        <div>Окна: во двор, на улицу</div>
+                    </div>
+                    <div class="apartment-details-right">
+                        <div>Ремонт: дизайнерский</div>
+                        <div>Тёплый пол: есть</div>
+                        <div>Мебель: кухня, хранение одежды</div>
+                        <div>Техника: кондиционер, холодильник, стиральная машина</div>
+                        <div>Способ оплаты: свободная</div>
+                        <div>Вид сделки: возможна ипотека</div>
+                    </div>
+                </div>
+                <div class="apartment-description">
+                    В продаже эксклюзивный вариант 3х комнатной квартиры с шикарным видом на город. Дом удачно расположен в самом сердце Новосибирска на второй линии от дороги, нет шума и пыли. В жилом комплексе продумано всё до мелочей: детские и спортивные площадки, прогулочные зоны с красивым ландшафтным дизайном, на 3-м этаже расположен тренажёрный зал, детская игровая комната и терраса для прогулок и проведения времени на свежем воздухе. Современная система охраны: вся территория ведётся видеонаблюдением, охрана, консьерж, входные группы и лифты по уникальной номерной карте.
+                </div>
+                <div class="apartment-price">30 000 000 ₽</div>
+                <button class="apartment-btn" id="openModalBtn">ОСТАВИТЬ ЗАЯВКУ</button>
+            </div>
+        </div>
+    </main>
+    <div class="modal-overlay" id="modalOverlay">
+        <div class="modal-form">
+            <button class="modal-close" id="closeModalBtn">×</button>
+            <form class="form-inner">
+                <input type="text" placeholder="Имя" required>
+                <input type="tel" placeholder="Телефон" required>
+                <button type="submit">Отправить</button>
+            </form>
+        </div>
+    </div>
+    <footer class="site-footer">
+        <div class="footer-content">
+            <div class="footer-phone">+7 923 614 57 70</div>
+            <a href="#" class="footer-link">Политика конфиденциальности</a>
+            <div class="footer-copy">© 2024 Ирина Банкова</div>
+        </div>
+    </footer>
+    <script src="general.js"></script>
+    <script>
+        // Открытие и закрытие модального окна
+        const openModalBtn = document.getElementById('openModalBtn');
+        const closeModalBtn = document.getElementById('closeModalBtn');
+        const modalOverlay = document.getElementById('modalOverlay');
+        openModalBtn.addEventListener('click', () => {
+            modalOverlay.classList.add('show');
+        });
+        closeModalBtn.addEventListener('click', () => {
+            modalOverlay.classList.remove('show');
+        });
+        modalOverlay.addEventListener('click', (e) => {
+            if (e.target === modalOverlay) {
+                modalOverlay.classList.remove('show');
+            }
+        });
+    </script>
+</body>
+</html>

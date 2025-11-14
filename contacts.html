@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контакты | Ирина Банкова</title>
+    <link rel="stylesheet" href="contacts.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=27d5a431-4f44-4259-91ea-20aaa5ff71c7&lang=ru_RU" type="text/javascript"></script>
+</head>
+<body>
+    <header class="header-full">
+        <div class="header-inner">
+            <nav class="nav">
+                <a href="catalog.html" class="nav-link">Каталог</a>
+                <a href="blog.html" class="nav-link">Блог</a>
+                <a href="contacts.html" class="nav-link">Контакты</a>
+                <a href="#" class="nav-link">Обо мне</a>
+            </nav>
+            <div class="logo">Ирина Банкова</div>
+            <div class="contacts">
+                <div class="phone-dropdown">
+                    <span class="phone-number">+7 923 614 57 70 <span class="arrow">▼</span></span>
+                    <div class="dropdown-content">
+                        <a href="https://wa.me/79236145770" target="_blank" class="dropdown-item whatsapp">
+                            <img src="img/what.png" alt="WhatsApp" class="icon"> +7 923 614 57 70
+                        </a>
+                        <a href="https://t.me/iren_pro_nedvizhimost" target="_blank" class="dropdown-item telegram">
+                            <img src="img/tg.png" alt="Telegram" class="icon"> @iren_pro_nedvizhimost
+                        </a>
+                        <a href="https://instagram.com/irenpronedvizhimost" target="_blank" class="dropdown-item instagram">
+                            <img src="img/inst.png" alt="Instagram" class="icon"> @irenpronedvizhimost
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main class="contacts-main">
+        <div class="breadcrumbs"><a href="home.html">Главная</a> / <a href="contacts.html">Контакты</a></div>
+        <h1 class="contacts-title">Контакты</h1>
+        <div class="contacts-block">
+            <div class="contacts-left">
+                <a href="https://wa.me/79236145770" target="_blank" class="contact-item whatsapp">
+                    <img src="img/what.png" alt="WhatsApp" class="icon"> +7 923 614 57 70
+                </a>
+                <a href="https://t.me/iren_pro_nedvizhimost" target="_blank" class="contact-item telegram">
+                    <img src="img/tg.png" alt="Telegram" class="icon"> @iren_pro_nedvizhimost
+                </a>
+                <a href="https://instagram.com/irenpronedvizhimost" target="_blank" class="contact-item instagram">
+                    <img src="img/inst.png" alt="Instagram" class="icon"> @irenpronedvizhimost
+                </a>
+            </div>
+            <div class="contacts-separator"></div>
+            <div class="contacts-right">
+                <div class="contact-item schedule">
+                    <img src="img/clock.png" alt="clock" class="icon">
+                    <div>
+                        <span><b>График работы</b></span><br>
+                        <span>Пн—Пт с 11:00 до 21:00</span><br>
+                        <span>Сб—Вс Выходной</span>
+                    </div>
+                </div>
+                <a href="mailto:irenpronedvizhimost@gmail.com" class="contact-item email">
+                    <img src="img/mail.png" alt="email" class="icon"> irenpronedvizhimost@gmail.com
+                </a>
+            </div>
+        </div>
+        <div id="map"></div>
+    </main>
+    <footer class="site-footer">
+        <div class="footer-content">
+            <div class="footer-phone">+7 923 614 57 70</div>
+            <a href="#" class="footer-link">Политика конфиденциальности</a>
+            <div class="footer-copy">© 2024 Ирина Банкова</div>
+        </div>
+    </footer>
+    <script src="general.js"></script>
+    <script type="text/javascript">
+        ymaps.ready(init);
+        function init(){
+            var myMap = new ymaps.Map("map", {
+                center: [55.717543, 84.926170],
+                zoom: 15
+            });
+            var myPlacemark = new ymaps.Placemark([55.717543, 84.926170], {}, {
+                preset: 'islands#blackStretchyIcon'
+            });
+            myMap.geoObjects.add(myPlacemark);
+        }
+    </script>
+</body>
+</html>

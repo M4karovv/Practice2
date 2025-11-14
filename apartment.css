@@ -1,0 +1,372 @@
+body {
+    margin: 0;
+    font-family: 'Montserrat', Arial, sans-serif;
+    background: #fff;
+    color: #181818;
+}
+.header-full {
+    width: 100vw;
+    background: #fff;
+    border-bottom: 1px solid #bdbdbd;
+    box-sizing: border-box;
+    position: relative;
+    z-index: 20;
+}
+.header-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 0 10px 0;
+}
+.nav {
+    display: flex;
+    gap: 24px;
+}
+.nav-link {
+    text-decoration: none;
+    color: #181818;
+    font-size: 16px;
+    transition: color 0.2s;
+}
+.nav-link:hover {
+    color: #888;
+}
+.logo {
+    font-weight: 700;
+    font-size: 24px;
+    margin-left: 40px;
+}
+.contacts {
+    min-width: 220px;
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+}
+.phone-dropdown {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+}
+.phone-number {
+    font-weight: 600;
+    color: #888;
+    font-size: 16px;
+    user-select: none;
+}
+.arrow {
+    font-size: 12px;
+    margin-left: 4px;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 36px;
+    background: #fff;
+    border: 1px solid #bdbdbd;
+    border-radius: 10px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.12);
+    min-width: 260px;
+    z-index: 100;
+    padding: 10px 0;
+    animation: fadeIn 0.2s;
+}
+.dropdown-content.show {
+    display: block;
+}
+.dropdown-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 20px;
+    color: #181818;
+    text-decoration: none;
+    font-size: 16px;
+    transition: background 0.2s;
+}
+.dropdown-item:hover {
+    background: #f2f2f2;
+}
+.icon {
+    width: 22px;
+    height: 22px;
+}
+.breadcrumbs {
+    max-width: 1200px;
+    margin: 24px auto 0 auto;
+    color: #888;
+    font-size: 14px;
+}
+.breadcrumbs a {
+    color: #181818;
+    text-decoration: none;
+}
+.breadcrumbs a:hover {
+    color: #888;
+    text-decoration: underline;
+}
+.apartment-main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-bottom: 40px;
+}
+.apartment-title {
+    font-size: 32px;
+    font-weight: 500;
+    margin: 16px 0 24px 0;
+}
+.apartment-content {
+    display: flex;
+    gap: 32px;
+    align-items: flex-start;
+}
+.apartment-gallery {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+}
+.gallery-thumbs {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+.thumb {
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 2px solid #eee;
+    cursor: pointer;
+    transition: border 0.2s;
+}
+.thumb:hover {
+    border: 2px solid #888;
+}
+.gallery-main {
+    width: 380px;
+    height: 340px;
+    border-radius: 12px;
+    overflow: hidden;
+    background: #f5f5f5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.main-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.apartment-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+.apartment-header h2 {
+    font-size: 28px;
+    font-weight: 500;
+    margin: 0 0 8px 0;
+}
+.apartment-address {
+    color: #888;
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+.apartment-details {
+    display: flex;
+    gap: 32px;
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+.apartment-details-left, .apartment-details-right {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+.apartment-description {
+    font-size: 16px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+.apartment-price {
+    font-size: 28px;
+    font-weight: 600;
+    margin: 18px 0 10px 0;
+}
+.apartment-btn {
+    background: #000;
+    color: #fff;
+    border: none;
+    border-radius: 24px;
+    padding: 14px 0;
+    font-size: 20px;
+    cursor: pointer;
+    font-family: inherit;
+    font-weight: 500;
+    transition: background 0.2s;
+    width: 320px;
+    margin-top: 10px;
+}
+.apartment-btn:hover {
+    background: #444;
+}
+/* Модальное окно */
+.modal-overlay {
+    display: none;
+    position: fixed;
+    left: 0; top: 0; right: 0; bottom: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(40,40,40,0.45);
+    z-index: 2000;
+    align-items: center;
+    justify-content: center;
+}
+.modal-overlay.show {
+    display: flex;
+}
+.modal-form {
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 4px 32px rgba(0,0,0,0.18);
+    padding: 32px 32px 24px 32px;
+    min-width: 320px;
+    min-height: 180px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.modal-close {
+    position: absolute;
+    top: 12px;
+    right: 18px;
+    background: none;
+    border: none;
+    font-size: 22px;
+    color: #222;
+    cursor: pointer;
+}
+.form-inner {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    width: 100%;
+    margin-top: 10px;
+}
+.form-inner input {
+    padding: 10px 16px;
+    border: 1px solid #bdbdbd;
+    border-radius: 16px;
+    font-size: 16px;
+    outline: none;
+    background: #fafafa;
+    transition: border 0.2s;
+}
+.form-inner input:focus {
+    border: 1.5px solid #888;
+}
+.form-inner button[type="submit"] {
+    background: #000;
+    color: #fff;
+    border: none;
+    border-radius: 24px;
+    padding: 12px 0;
+    font-size: 20px;
+    cursor: pointer;
+    font-family: inherit;
+    font-weight: 500;
+    transition: background 0.2s;
+    margin-top: 10px;
+}
+.form-inner button[type="submit"]:hover {
+    background: #444;
+}
+@media (max-width: 900px) {
+    .header-inner, .apartment-main {
+        max-width: 100%;
+        padding: 0 8px;
+    }
+    .apartment-content {
+        flex-direction: column;
+        gap: 24px;
+    }
+    .gallery-main {
+        width: 100%;
+        height: 220px;
+    }
+}
+@media (max-width: 600px) {
+    .apartment-title {
+        font-size: 20px;
+    }
+    .apartment-header h2 {
+        font-size: 18px;
+    }
+    .apartment-btn {
+        font-size: 16px;
+        width: 100%;
+    }
+    .modal-form {
+        min-width: 90vw;
+        padding: 18px 8px 18px 8px;
+    }
+}
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+.site-footer {
+    background: #fff;
+    color: #181818;
+    box-shadow: 0 -2px 12px rgba(0,0,0,0.08);
+    font-size: 15px;
+    margin-top: 48px;
+}
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 18px;
+    padding: 12px 16px 10px 16px;
+}
+.footer-phone {
+    font-weight: 600;
+    font-size: 16px;
+}
+.footer-info {
+    flex: 2;
+    text-align: center;
+    font-size: 14px;
+    color: #e0e0e0;
+}
+.footer-link {
+    color: #181818;
+    text-decoration: underline;
+    font-size: 14px;
+    transition: color 0.2s;
+}
+.footer-link:hover {
+    color: #888;
+}
+.footer-copy {
+    font-size: 14px;
+    color: #888;
+}
+@media (max-width: 700px) {
+    .footer-content {
+        flex-direction: column;
+        gap: 6px;
+        padding: 10px 4px 8px 4px;
+    }
+    .footer-info, .footer-link, .footer-copy, .footer-phone {
+        text-align: center;
+        width: 100%;
+    }
+}
